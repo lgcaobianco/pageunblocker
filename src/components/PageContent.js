@@ -3,7 +3,7 @@ class PageContent extends React.Component {
   render() {
     return (
       <div>
-        <p>well, hello, you've foun me.</p>
+        <p>Conteudo desbloqueado:</p>
       </div>
     );
   }

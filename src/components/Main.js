@@ -1,8 +1,11 @@
 import React, { Component } from "react";
+import PropTypes from "prop-types";
 
 class Main extends Component {
+  static propTypes = {
+    updateHtmlContent: PropTypes.func
+  };
   urlquery = React.createRef();
-  state = {};
   httpGetAsync = (theUrl, callback) => {
     var xmlHttp = new XMLHttpRequest();
     xmlHttp.onreadystatechange = function() {
@@ -13,28 +16,39 @@ class Main extends Component {
     xmlHttp.send(null);
   };
 
-  processPage = responseText => {
-    this.setState({ htmlcontent: responseText });
-  };
-
   handleSubmit = event => {
     event.preventDefault();
     const url = this.urlquery.current.value;
-    this.httpGetAsync(url, this.processPage);
+    if (!url) {
+      alert("Insira uma página!");
+      return;
+    }
+    this.props.updateState();
+    this.httpGetAsync(url, this.props.updateHtmlContent);
   };
   render() {
     return (
-      <div>
-        <p>1) Copie o endereço da página que quer ler.</p>
-        <input
-          type="text"
-          id=""
-          ref={this.urlquery}
-          placeholder="2) Cole o endereço aqui."
-        />
-        <button type="submit" onClick={this.handleSubmit}>
-          Desbloquear
-        </button>
+      <div className="intro">
+        <p className="passo1">
+          <span className="passo1-texto">
+            Primeiro, copie o endereço da página que você deseja ler.
+          </span>
+        </p>
+        <div className="inputwrapper">
+          <input
+            className="inputonly"
+            type="text"
+            id=""
+            ref={this.urlquery}
+            placeholder="Agora cole o endereço aqui."
+          />
+        </div>
+
+        <div>
+          <button type="submit" className="unblock" onClick={this.handleSubmit}>
+            {this.props.buttonText}
+          </button>
+        </div>
       </div>
     );
   }

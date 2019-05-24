@@ -1,0 +1,79 @@
+html {
+  margin: -2ch;
+  overflow-x: hidden;
+}
+.App {
+  padding: 2ch;
+  background-color: #ff1493;
+/*
+    background: repeating-linear-gradient(
+    135 deg,
+    $pink 10px,
+    black 1px,
+    $pink 12px,
+    $pink 40px
+    );
+    */
+}
+.content {
+  background-color: #f7f4f7;
+  padding: 2ch;
+  margin: 2ch;
+  box-shadow: 2px 5px 13px #000;
+  border-radius: 15px;
+}
+@import url("https://fonts.googleapis.com/css?family=Montaga&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Indie+Flower&display=swap");
+.intro {
+  font-size: 2rem;
+  font-family: Indie Flower;
+  text-align: center;
+}
+.inputonly {
+  background: #f7f4f7;
+  color: #8a2be2;
+  font-family: Montaga;
+  outline: none;
+  width: 100%;
+  font-size: 1.25rem;
+  border: 0px #f7f4f7 solid;
+  border-bottom: 1px #8a2be2 solid;
+  -webkit-transition: 0.25s;
+  transition: 0.25s;
+  text-align: center;
+}
+.inputonly:focus {
+  box-shadow: 0px -2px #8a2be2;
+}
+.inputonly::-webkit-input-placeholder {
+  color: #e3e4e5;
+  text-align: center;
+}
+.inputonly::-moz-placeholder {
+  color: #e3e4e5;
+  text-align: center;
+}
+.inputonly:-ms-input-placeholder {
+  color: #e3e4e5;
+  text-align: center;
+}
+.inputonly::placeholder {
+  color: #e3e4e5;
+  text-align: center;
+}
+@import url("https://fonts.googleapis.com/css?family=Permanent+Marker&display=swap");
+.unblock {
+  font-family: Permanent Marker;
+  color: #000;
+  border: 0px #f7f4f7 solid;
+  background-color: #f7f4f7;
+  font-size: 1em;
+  -webkit-transition: 0.25s;
+  transition: 0.25s;
+  background: -webkit-gradient(linear, left bottom, right top, from(#ff1493), color-stop(80%, #e2d5e2), color-stop(90%, #f7f4f7));
+  background: -webkit-linear-gradient(bottom left, #ff1493, #e2d5e2 80%, #f7f4f7 90%);
+  background: linear-gradient(to top right, #ff1493, #e2d5e2 80%, #f7f4f7 90%);
+}
+.unblock:hover {
+  box-shadow: 0px 10px 5px 0px rgba(0,0,0,0.75);
+}

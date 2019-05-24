@@ -1,0 +1,70 @@
+$pink = #FF1493
+$purple = #8A2BE2;
+$maincolor = #f7f4f7;
+
+html
+    margin -2ch
+    overflow-x: hidden
+.App
+    padding: 2ch
+    background-color: $pink
+    /*
+    background: repeating-linear-gradient(
+    135 deg,
+    $pink 10px,
+    black 1px,
+    $pink 12px,
+    $pink 40px
+    );
+    */
+.content
+    background-color: $maincolor;
+    padding 2ch
+    margin 2ch
+    box-shadow 2px 5px 13px black;
+    border-radius 15px
+
+
+@import url('https://fonts.googleapis.com/css?family=Montaga&display=swap')
+@import url('https://fonts.googleapis.com/css?family=Indie+Flower&display=swap')
+.intro
+    font-size: 2rem;
+    font-family: Indie Flower
+    text-align: center
+
+
+.inputonly
+    background: $maincolor
+    color $purple
+    font-family: Montaga
+    outline none
+    width 100%
+    font-size 1.25rem
+    border 0px $maincolor solid
+    border-bottom: 1px $purple solid;
+    transition: 0.25s
+    text-align center
+    &:focus
+        box-shadow 0px -2px  $purple
+    &::placeholder
+        color #e3e4e5
+        text-align: center
+
+@import url("https://fonts.googleapis.com/css?family=Permanent+Marker&display=swap")
+
+.unblock
+    font-family: Permanent Marker
+    color black
+    border 0px $maincolor solid
+    background-color: $maincolor
+    font-size: 1em
+    transition 0.25s
+    background linear-gradient(
+        to top right,
+        $pink,
+        #e2d5e2 80%,
+        $maincolor 90%
+    )
+    &:hover
+        box-shadow: 0px 10px 5px 0px rgba(0,0,0,0.75);
+
